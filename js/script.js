@@ -6,11 +6,15 @@ const interruttore = document.getElementById('btn-on-off');
 //Inizializzazione eventi
 //Accensione e spegnimento lampadina tramite bottone
 interruttore.addEventListener('click', function() {
-    if (lampadina.src.includes('yellow')) {
-        lampadina.src = './img/white_lamp.png';
-
-    } else {
+    //se la lampadina è spenta
+    if (lampadina.src.includes('white')) {
         lampadina.src = './img/yellow_lamp.png';
+        interruttore.innerText = 'Spegni';
+    } 
+    //se la lampadina è accesa
+    else {
+        lampadina.src = './img/white_lamp.png';
+        interruttore.innerText = 'Accendi';
     }
 });
   
